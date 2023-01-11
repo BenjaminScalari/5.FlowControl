@@ -1,0 +1,68 @@
+@mixin article-card($color, $border, $font-size) {
+  color: $color;
+  border: $border;
+  font-size: $font-size;
+}
+
+$root-font-size: 16px;
+
+@function rem($px) {
+  @return ($px / $root-font-size) * 1rem;
+}
+
+div {
+  border: 1px solid red;
+
+  h1 {
+    text-align: center;
+    text-decoration: underline 1px blue;
+    color: green;
+  }
+
+  h2 {
+    @extend h1;
+    padding: 1rem;
+    border: rem(1px) solid red;
+    width: rem(250px);
+    margin: auto;
+  }
+
+  #main-section {
+    display: flex;
+    justify-content: center;
+    padding: rem(20px);
+
+    article {
+      text-align: center;
+      padding: rem(15px);
+    }
+
+    .main-article:nth-child(odd) {
+      @include article-card(blue, 1px solid green, 1rem)
+    }
+
+    .main-article:nth-child(even) {
+      @include article-card(red, 1px solid green, 1rem)
+    }
+
+  }
+
+
+  #second-section {
+    @for $var from 1 to 20 {
+      
+    }
+  }
+
+
+  #footer-section {
+    padding: 0 rem(20px) rem(20px);
+
+    #footer-article {
+      text-align: center;
+      @include article-card(green, 1px solid green, rem(24px))
+    }
+
+  }
+
+}
