@@ -1,17 +1,12 @@
-@mixin article-card($color, $border, $font-size) {
-  color: $color;
-  border: $border;
-  font-size: $font-size;
-}
+@import "_variables.scss";
+@import "_function.scss";
 
-$root-font-size: 16px;
-
-@function rem($px) {
-  @return ($px / $root-font-size) * 1rem;
+%container-border {
+  border: 1px solid red;
 }
 
 div {
-  border: 1px solid red;
+  @extend %container-border;
 
   h1 {
     text-align: center;
@@ -29,7 +24,7 @@ div {
 
   #main-section {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     padding: rem(20px);
 
     article {
@@ -46,23 +41,50 @@ div {
     }
 
   }
+////////////////////////
+#second-section {
+  display: flex;
+  justify-content: space-around;
+  .fs-1rem,
+  .fs-2rem,
+  .fs-3rem {
+    width: 3rem;
+    height: 3rem;
+    text-align: left;
 
-
-  #second-section {
-    @for $var from 1 to 20 {
-      
+    $num: 0;
+    @for $i from 1 through 19 {
+      $num: $num + 5;
+      @if $i == 10 {
+        &:nth-child(#{$i}) {
+          background-color: blue;
+          color: red;
+       }
+     }
+     @else {
+        &:nth-child(#{$i}) {
+          background-color: darken(white, $num);
+          color: lighten(#000000, $num);
+        }
+      }
     }
   }
+$size: 1rem 2rem 3rem;
 
-
+    @each $i in $size {
+        .fs-#{$i} {
+            font-size: $i;
+        }
+    }
+}
+}
+////////////////////////
   #footer-section {
-    padding: 0 rem(20px) rem(20px);
+    padding: rem(20px);
 
     #footer-article {
       text-align: center;
-      @include article-card(green, 1px solid green, rem(24px))
+      @include article-card(green, 1px solid blue, rem(24px))
     }
 
   }
-
-}

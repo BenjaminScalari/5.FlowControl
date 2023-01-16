@@ -1,6 +1,7 @@
 div {
   border: 1px solid red;
 }
+
 div h1, div h2 {
   text-align: center;
   text-decoration: underline 1px blue;
@@ -14,7 +15,7 @@ div h2 {
 }
 div #main-section {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   padding: 1.25rem;
 }
 div #main-section article {
@@ -31,13 +32,148 @@ div #main-section .main-article:nth-child(even) {
   border: 1px solid green;
   font-size: 1rem;
 }
-div #footer-section {
-  padding: 0 1.25rem 1.25rem;
+div #second-section {
+  display: flex;
+  justify-content: space-around;
 }
-div #footer-section #footer-article {
+div #second-section .fs-1rem,
+div #second-section .fs-2rem,
+div #second-section .fs-3rem {
+  width: 3rem;
+  height: 3rem;
+  text-align: left;
+}
+div #second-section .fs-1rem:nth-child(1),
+div #second-section .fs-2rem:nth-child(1),
+div #second-section .fs-3rem:nth-child(1) {
+  background-color: #f2f2f2;
+  color: #0d0d0d;
+}
+div #second-section .fs-1rem:nth-child(2),
+div #second-section .fs-2rem:nth-child(2),
+div #second-section .fs-3rem:nth-child(2) {
+  background-color: #e6e6e6;
+  color: #1a1a1a;
+}
+div #second-section .fs-1rem:nth-child(3),
+div #second-section .fs-2rem:nth-child(3),
+div #second-section .fs-3rem:nth-child(3) {
+  background-color: #d9d9d9;
+  color: #262626;
+}
+div #second-section .fs-1rem:nth-child(4),
+div #second-section .fs-2rem:nth-child(4),
+div #second-section .fs-3rem:nth-child(4) {
+  background-color: #cccccc;
+  color: #333333;
+}
+div #second-section .fs-1rem:nth-child(5),
+div #second-section .fs-2rem:nth-child(5),
+div #second-section .fs-3rem:nth-child(5) {
+  background-color: #bfbfbf;
+  color: #404040;
+}
+div #second-section .fs-1rem:nth-child(6),
+div #second-section .fs-2rem:nth-child(6),
+div #second-section .fs-3rem:nth-child(6) {
+  background-color: #b3b3b3;
+  color: #4d4d4d;
+}
+div #second-section .fs-1rem:nth-child(7),
+div #second-section .fs-2rem:nth-child(7),
+div #second-section .fs-3rem:nth-child(7) {
+  background-color: #a6a6a6;
+  color: #595959;
+}
+div #second-section .fs-1rem:nth-child(8),
+div #second-section .fs-2rem:nth-child(8),
+div #second-section .fs-3rem:nth-child(8) {
+  background-color: #999999;
+  color: #666666;
+}
+div #second-section .fs-1rem:nth-child(9),
+div #second-section .fs-2rem:nth-child(9),
+div #second-section .fs-3rem:nth-child(9) {
+  background-color: #8c8c8c;
+  color: #737373;
+}
+div #second-section .fs-1rem:nth-child(10),
+div #second-section .fs-2rem:nth-child(10),
+div #second-section .fs-3rem:nth-child(10) {
+  background-color: blue;
+  color: red;
+}
+div #second-section .fs-1rem:nth-child(11),
+div #second-section .fs-2rem:nth-child(11),
+div #second-section .fs-3rem:nth-child(11) {
+  background-color: #737373;
+  color: #8c8c8c;
+}
+div #second-section .fs-1rem:nth-child(12),
+div #second-section .fs-2rem:nth-child(12),
+div #second-section .fs-3rem:nth-child(12) {
+  background-color: #666666;
+  color: #999999;
+}
+div #second-section .fs-1rem:nth-child(13),
+div #second-section .fs-2rem:nth-child(13),
+div #second-section .fs-3rem:nth-child(13) {
+  background-color: #595959;
+  color: #a6a6a6;
+}
+div #second-section .fs-1rem:nth-child(14),
+div #second-section .fs-2rem:nth-child(14),
+div #second-section .fs-3rem:nth-child(14) {
+  background-color: #4d4d4d;
+  color: #b3b3b3;
+}
+div #second-section .fs-1rem:nth-child(15),
+div #second-section .fs-2rem:nth-child(15),
+div #second-section .fs-3rem:nth-child(15) {
+  background-color: #404040;
+  color: #bfbfbf;
+}
+div #second-section .fs-1rem:nth-child(16),
+div #second-section .fs-2rem:nth-child(16),
+div #second-section .fs-3rem:nth-child(16) {
+  background-color: #333333;
+  color: #cccccc;
+}
+div #second-section .fs-1rem:nth-child(17),
+div #second-section .fs-2rem:nth-child(17),
+div #second-section .fs-3rem:nth-child(17) {
+  background-color: #262626;
+  color: #d9d9d9;
+}
+div #second-section .fs-1rem:nth-child(18),
+div #second-section .fs-2rem:nth-child(18),
+div #second-section .fs-3rem:nth-child(18) {
+  background-color: #1a1a1a;
+  color: #e6e6e6;
+}
+div #second-section .fs-1rem:nth-child(19),
+div #second-section .fs-2rem:nth-child(19),
+div #second-section .fs-3rem:nth-child(19) {
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+}
+div #second-section .fs-1rem {
+  font-size: 1rem;
+}
+div #second-section .fs-2rem {
+  font-size: 2rem;
+}
+div #second-section .fs-3rem {
+  font-size: 3rem;
+}
+
+#footer-section {
+  padding: 1.25rem;
+}
+#footer-section #footer-article {
   text-align: center;
   color: green;
-  border: 1px solid green;
+  border: 1px solid blue;
   font-size: 1.5rem;
 }
 
